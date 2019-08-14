@@ -39,7 +39,7 @@ body {
     
     div.adminmenu {
 	float: right;
-	margin: 10px 20% 10px 0;
+	margin: 1em 20% 1em 0;
     }
     
     div.clearfloat {
@@ -52,11 +52,11 @@ body {
 	margin-left: 10%;
 	
 	div.search-bar {
-	    margin-top: 20px;
+	    margin-top: 1.5em;
 	}
 
 	div.calendar {
-	    margin-top: 30px;
+	    margin-top: 2em;
 	}
     }
     
@@ -69,7 +69,7 @@ body {
 
 	    h2 {
 		background-color: #dbb;
-		padding: 5px;
+		padding: 0.25em;
 		a, a:visited, a:hover {
 		    color: black;
 		}
@@ -88,17 +88,15 @@ body {
 			color: #aa0088;
 		    }
 		    p {
-			padding-left: 10px;
+			padding-left: 1em;
 		 	margin: 1em 0 1em 0;
 		    }
 		    pre {
-			margin: 20px 0 20px 50px;
-			padding: 5px;
+			margin: 2em 0 2em 4em;
+			padding: 0.25em;
 			background: #888;
 		    }
 		    pre.has-code {
-			margin: 20px 0 20px 50px;
-			padding: 5px;
 			background: linear-gradient(-45deg, #fdf, #fef);
 		    }
 		    
@@ -170,6 +168,20 @@ body {
 	    }
 	    div#comment-form-section {
 		margin-top: 0.5em;
+		div.caption {
+		    margin-bottom: 0.5em;
+		}
+		input[name=name] {
+		    margin-left: 0.25em;
+		}
+		div.textarea {
+		    textarea {
+			max-width: 100%;
+		    }
+		}
+		div.button {
+		    margin: 0.5em 0 0.5em 0;
+		}
 	    }
 	    
 	    div.referer {
