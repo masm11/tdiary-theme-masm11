@@ -220,8 +220,18 @@ body {
 		    }
 		}
 		div.commentbody {
-		    div.commentor {
-			font-style: bold;
+		    font-syle: bold;
+		    div.commentator {
+			a {
+			    span.canchor {
+				font-size: 0;
+			    }
+			    span.canchor::before {
+				font-size: 1rem;
+				content: "➢";
+			    }
+			    text-decoration: none;
+			}
 		    }
 		    p {
 			margin-bottom: 0.5em;
