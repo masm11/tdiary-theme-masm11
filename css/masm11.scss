@@ -109,8 +109,15 @@ body {
 	    div.body {
 		div.section {
 		    h3 {
-			span.sanchor {
-			    display: none;
+			a {
+			    span.sanchor {
+				font-size: 0;
+			    }
+			    span.sanchor::before {
+				font-size: 1rem;
+				content: "⭕";
+			    }
+			    text-decoration: none;
 			}
 			color: #aa0088;
 		    }
@@ -201,8 +208,15 @@ body {
 		    border-color: #888888;
 		}
 		div.commentshort {
-		    span.canchor {
-			display: none;
+		    a {
+			span.canchor {
+			    font-size: 0;
+			}
+			span.canchor::before {
+			    font-size: 1rem;
+			    content: "➢";
+			}
+			text-decoration: none;
 		    }
 		}
 		div.commentbody {
