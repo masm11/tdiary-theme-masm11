@@ -144,6 +144,17 @@ body {
 			    background: #211;
 			}
 		    }
+		    blockquote {
+			@media (min-width: 1024.01px) {
+			    margin-left: 4em;
+			}
+			@media (max-width: 1024px) {
+			    margin-left: 2em;
+			}
+			border: 0.25em solid #fef;
+			border-style: none none none solid;
+			background: #211;
+		    }
 		    
 		    /* from default.css */
 		    ul, ol {
