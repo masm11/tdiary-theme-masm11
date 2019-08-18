@@ -144,6 +144,10 @@ body {
 			    background: #211;
 			}
 		    }
+		    code {
+			font-style: monospace;
+			background: #222;
+		    }
 		    blockquote {
 			@media (min-width: 1024.01px) {
 			    margin-left: 4em;
