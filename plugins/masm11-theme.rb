@@ -8,6 +8,14 @@ add_header_proc do
         $('pre:has(code)').addClass('has-code');
       });
     </script>
+    <script>
+      $(function(){
+        $('span.sanchor').text('⭕');
+      });
+      $(function(){
+        $('span.canchor').text('➢');
+      });
+    </script>
   EOT
 end
 
