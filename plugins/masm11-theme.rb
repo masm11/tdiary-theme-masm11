@@ -21,5 +21,5 @@ end
 
 # smartphone 用に文字列を短くする。
 # PC でもこれでいい。
-def navi_prev_diary(date); "前(#{date.strftime('%Y-%m-%d')})"; end
-def navi_next_diary(date); "次(#{date.strftime('%Y-%m-%d')})"; end
+def navi_prev_diary(date); "前の日記"; end
+def navi_next_diary(date); "次の日記"; end
