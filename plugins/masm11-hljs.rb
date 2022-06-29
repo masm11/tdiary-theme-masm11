@@ -11,7 +11,7 @@
 add_header_proc do
 
   highlightjs_base = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0'
-  langs = [ 'lisp', 'erb', 'groovy', 'kotlin', 'yaml' ]		# 今のところは 'x86asm' はやめとこうか。要らない。
+  langs = [ 'lisp', 'erb', 'groovy', 'kotlin', 'yaml', 'rust' ]		# 今のところは 'x86asm' はやめとこうか。要らない。
 
   lang_loader = langs.map{|lang|
     %Q[<script src="#{highlightjs_base}/languages/#{lang}.min.js"></script>]
