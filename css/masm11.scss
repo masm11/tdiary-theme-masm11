@@ -158,6 +158,7 @@ div.day {
 	    }
 	    pre > code {
 		overflow-x: auto;
+		display: block;
 	    }
 	    blockquote {
 		@media (min-width: 1024.01px) {
