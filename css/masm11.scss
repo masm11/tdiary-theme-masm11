@@ -156,6 +156,9 @@ div.day {
 		font-family: monospace;
 		background: #222;
 	    }
+	    pre > code {
+		overflow-x: auto;
+	    }
 	    blockquote {
 		@media (min-width: 1024.01px) {
 		    margin-left: 4em;
