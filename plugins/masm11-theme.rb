@@ -24,7 +24,7 @@ end
 def navi_prev_diary(date); "前の日記"; end
 def navi_next_diary(date); "次の日記"; end
 
-class ::String
+class ::Object
   def untaint
     self
   end
