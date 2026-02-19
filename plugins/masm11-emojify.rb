@@ -1,6 +1,6 @@
 require 'emot'
 
-class String
+class ::String
   def emojify
     self.to_str.gsub(/:([a-zA-Z0-9_+-]+):/) do |match|
       emoji_alias = $1.downcase
