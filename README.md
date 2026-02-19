@@ -18,6 +18,7 @@ sass masm11.scss masm11.css
    - masm11-dow
    - masm11-hljs
    - masm11-theme
+   - masm11-emojify
 2. select theme:
    - masm11
 
