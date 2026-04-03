@@ -22,12 +22,18 @@ add_header_proc do
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
     #{lang_loader}
     <style>
-      /* 日記の背景に馴染むように微調整 */
+      /* 2. Highlight.js 側の背景色指定を無効化し、日記の背景を透かす */
       .hljs {
-        background: transparent !important; /* 背景を日記の背景色に合わせる */
+        background: none !important;
+        padding: 0 !important; /* 余計な余白もカット */
+        filter: contrast(1.2); /* もし文字が少し薄ければコントラストを上げる */
+      }
+      /* 3. コード全体のフォント設定（お好みで） */
+      pre code.hljs {
+        display: block;
+        overflow-x: auto;
         padding: 1em;
-        line-height: 1.5;
-        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        color: #ddd; /* デフォルトの文字色を少し明るくしておく */
       }
     </style>
     <script>
