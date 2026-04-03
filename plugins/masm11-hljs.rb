@@ -10,7 +10,7 @@
 
 add_header_proc do
 
-  langs = %[
+  langs = %w(
     lisp
     erb
     groovy
@@ -24,7 +24,7 @@ add_header_proc do
     xml
     python
     ruby
-  ]
+  )
 
   lang_loader = langs.map{|lang|
     %Q[<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/#{lang}.min.js"></script>]
