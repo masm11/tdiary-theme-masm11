@@ -10,7 +10,21 @@
 
 add_header_proc do
 
-  langs = [ 'lisp', 'erb', 'groovy', 'kotlin', 'yaml', 'rust', 'autohotkey', 'vim', 'ini', 'lua', 'xml', 'python', 'ruby' ]
+  langs = %[
+    lisp
+    erb
+    groovy
+    kotlin
+    yaml
+    rust
+    autohotkey
+    vim
+    ini
+    lua
+    xml
+    python
+    ruby
+  ]
 
   lang_loader = langs.map{|lang|
     %Q[<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/#{lang}.min.js"></script>]
@@ -18,7 +32,7 @@ add_header_proc do
 
 
   <<~EOT
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/vs2015.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
     #{lang_loader}
     <script>
