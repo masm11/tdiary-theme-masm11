@@ -16,10 +16,24 @@ add_header_proc do
     %Q[<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/#{lang}.min.js"></script>]
   }.join("\n")
 
+
   <<~EOT
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/monokai.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
     #{lang_loader}
-    <script>hljs.highlightAll();</script>
+    <style>
+      /* 日記の背景に馴染むように微調整 */
+      .hljs {
+        background: transparent !important; /* 背景を日記の背景色に合わせる */
+        padding: 1em;
+        line-height: 1.5;
+        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+      }
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        hljs.highlightAll();
+      });
+    </script>
   EOT
 end
