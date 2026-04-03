@@ -10,17 +10,16 @@
 
 add_header_proc do
 
-  highlightjs_base = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0'
-  langs = [ 'lisp', 'erb', 'groovy', 'kotlin', 'yaml', 'rust' ]		# 今のところは 'x86asm' はやめとこうか。要らない。
+  langs = [ 'lisp', 'erb', 'groovy', 'kotlin', 'yaml', 'rust', 'autohotkey', 'vim', 'ini', 'lua', 'xml', 'python', 'ruby' ]
 
   lang_loader = langs.map{|lang|
-    %Q[<script src="#{highlightjs_base}/languages/#{lang}.min.js"></script>]
+    %Q[<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/#{lang}.min.js"></script>]
   }.join("\n")
 
   <<~EOT
-    <link rel="stylesheet" href="#{highlightjs_base}/styles/obsidian.min.css">
-    <script src="#{highlightjs_base}/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
     #{lang_loader}
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>hljs.highlightAll();</script>
   EOT
 end
