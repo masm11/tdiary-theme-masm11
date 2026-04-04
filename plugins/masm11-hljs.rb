@@ -30,6 +30,19 @@ add_header_proc do
     %Q[<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/#{lang}.min.js"></script>]
   }.join("\n")
 
+  # https://stackoverflow.com/questions/55860466/how-can-i-add-language-aliases-to-highlightjs
+  alias_defs = [
+    [ 'autohotkey', 'ahk' ]
+  ].map do |def|
+    orig = def[0]
+    alias = def[1]
+    <<~SNIPPET
+      var lang = hljs.requireLanguage("#{orig}").rawDefinition();
+      lang.aliases.concat(["#{alias}"]);
+      hljs.registerLanguage("#{orig}", lang);
+    SNIPPET
+  end.join("\n")
+
 
   <<~EOT
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css">
@@ -37,6 +50,7 @@ add_header_proc do
     #{lang_loader}
     <script>
       document.addEventListener('DOMContentLoaded', (event) => {
+        #{alias_defs}
         hljs.highlightAll();
       });
     </script>
