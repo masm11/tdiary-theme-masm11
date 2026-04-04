@@ -37,6 +37,7 @@ add_header_proc do
         font-weight: 400;
         font-style: normal;
         font-variation-settings: "wdth" 100;
+        font-size: 0.8rem;
       }
     </style>
   EOT
