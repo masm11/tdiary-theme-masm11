@@ -28,13 +28,13 @@ add_header_proc do
       p {
         font-family: "Noto Sans JP", sans-serif;
         font-optical-sizing: auto;
-        font-weight: 100;
+        font-weight: 400;
         font-style: normal;
       }
       div.day div.body div.section code {
         font-family: "Noto Sans Mono", monospace;
         font-optical-sizing: auto;
-        font-weight: 100;
+        font-weight: 400;
         font-style: normal;
         font-variation-settings: "wdth" 100;
       }
