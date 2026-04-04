@@ -40,7 +40,7 @@ add_header_proc do
     <<~SNIPPET
       {
         const lang = hljs.getLanguage("#{org}");
-        lang.aliases = (lang.aliases || []).concat([alas]);
+        lang.aliases = (lang.aliases || []).concat(["#{alas}"]);
         hljs.registerLanguage("#{org}", () => lang);
       }
     SNIPPET
