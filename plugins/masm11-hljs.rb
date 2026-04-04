@@ -24,6 +24,16 @@ add_header_proc do
     xml
     python
     ruby
+    c
+    cpp
+    java
+    javascript
+    sql
+    json
+    css
+    gradle
+    perl
+    coffeescript
   )
 
   lang_loader = langs.map{|lang|
@@ -33,6 +43,10 @@ add_header_proc do
   alias_defs = [
     [ 'autohotkey', 'ahk' ],
     [ 'lisp',       'elisp' ],
+    [ 'ini',        'dosini' ],
+    [ 'javascript', 'js' ],
+    [ 'bash',       'fish' ],
+    [ 'bash',       'shell' ],
   ].map do |d|
     org = d[0]
     als = d[1]
