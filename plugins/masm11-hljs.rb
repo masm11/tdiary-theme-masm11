@@ -34,6 +34,7 @@ add_header_proc do
     gradle
     perl
     coffeescript
+    powershell
   )
 
   lang_loader = langs.map{|lang|
