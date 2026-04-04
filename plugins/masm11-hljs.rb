@@ -33,9 +33,9 @@ add_header_proc do
   # https://stackoverflow.com/questions/55860466/how-can-i-add-language-aliases-to-highlightjs
   alias_defs = [
     [ 'autohotkey', 'ahk' ]
-  ].map do |def|
-    orig = def[0]
-    alias = def[1]
+  ].map do |d|
+    orig = d[0]
+    alias = d[1]
     <<~SNIPPET
       var lang = hljs.requireLanguage("#{orig}").rawDefinition();
       lang.aliases.concat(["#{alias}"]);
