@@ -34,12 +34,12 @@ add_header_proc do
   alias_defs = [
     [ 'autohotkey', 'ahk' ]
   ].map do |d|
-    orig = d[0]
-    alias = d[1]
+    org = d[0]
+    als = d[1]
     <<~SNIPPET
-      var lang = hljs.requireLanguage("#{orig}").rawDefinition();
-      lang.aliases.concat(["#{alias}"]);
-      hljs.registerLanguage("#{orig}", lang);
+      var lang = hljs.requireLanguage("#{org}").rawDefinition();
+      lang.aliases.concat(["#{als}"]);
+      hljs.registerLanguage("#{org}", lang);
     SNIPPET
   end.join("\n")
 
