@@ -145,9 +145,11 @@ div.day {
 		    padding: 0.125em;
 		}
 		background: #888;
+		overflow-x: auto;
 	    }
 	    pre.has-code {
 		background: linear-gradient(-45deg, #fdf, #fef);
+		overflow: hidden;
 		code.hljs {
 		    background: #211;
 		}
@@ -157,8 +159,10 @@ div.day {
 		background: #222;
 	    }
 	    pre > code {
-		/* overflow-x: hidden; */
 		display: block;
+		overflow-x: auto;
+		max-width: 100%;
+		box-sizing: border-box;
 	    }
 	    blockquote {
 		@media (min-width: 1024.01px) {
@@ -174,11 +178,17 @@ div.day {
 
 	    /* from default.css */
 	    ul, ol {
+		margin-top: 1em;
+		margin-bottom: 1em;
 		@media (min-width: 1024.01px) {
 		    margin-left: 50px;
 		}
 		@media (max-width: 1024px) {
 		    margin-left: 30px;
+		}
+		ul, ol {
+		    margin-top: 0;
+		    margin-bottom: 0;
 		}
 	    }
 	    dl {
