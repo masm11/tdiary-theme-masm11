@@ -13,6 +13,9 @@
 # 使う場所:
 # プラグインを ON にするだけです。
 #
+# その他:
+# フロントエンドで medium-zoom (MIT License) を利用しています。
+#
 # ライセンスについて:
 # Copyright (c) 2026 Yuuki Harano <masmer4@yahoo.co.jp>
 #
